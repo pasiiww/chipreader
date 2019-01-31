@@ -25,14 +25,14 @@ for name in os.listdir(pic_path):
         color, chiptype, equip, attr, inter = regions[i]
 
         sheet.write(num,0,name)
-        sheet.write(num,1,str(i))
+        sheet.write(num,1,i)
         sheet.write(num,2,chiptype)
         sheet.write(num,3,color)
-        sheet.write(num,4,str(inter))
-        sheet.write(num,5,str(attr[2]))
-        sheet.write(num,6,str(attr[3]))
-        sheet.write(num,7,str(attr[0]))
-        sheet.write(num,8,str(attr[1]))
+        sheet.write(num,4,inter)
+        sheet.write(num,5,attr[2])
+        sheet.write(num,6,attr[3])
+        sheet.write(num,7,attr[0])
+        sheet.write(num,8,attr[1])
 
         #sheet.write(num,4,str(t))
         num +=1
