@@ -294,12 +294,21 @@ def get_number(num):
         num2 = get_single_num(num2)
         if num1 == -1 or num2 ==-1 or num1 == 0:
             raise Exception('error when processing number')
+
         return num1 * 10 + num2
     else:
         #print(width)
-        num = get_single_num(num)
         if width > 0.63:
-            return 11 # .......
+            idx = 12
+            num1 = num[:,0:idx]
+            num2 = num[:,idx+1:]
+            num1 = get_single_num(num1)
+            num2 = get_single_num(num2)
+            if num1 == -1 or num2 ==-1 or num1 == 0:
+                raise Exception('error when processing number')
+
+            return num1 * 10 + num2
+        num = get_single_num(num)
         if num <= 0 :
             raise Exception('error when processing number')
         return num
