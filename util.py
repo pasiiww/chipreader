@@ -299,7 +299,9 @@ def get_number(num):
     else:
         #print(width)
         if width > 0.63:
-            idx = 12
+            idx = 9
+            if num_white[idx] > num_white[idx + 1] and idx < 13:
+                idx += 1
             num1 = num[:,0:idx]
             num2 = num[:,idx+1:]
             num1 = get_single_num(num1)
